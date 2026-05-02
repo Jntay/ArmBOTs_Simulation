@@ -1,0 +1,113 @@
+<mujoco model="C:\Users\jntay\Desktop\Rambot\Code\ArmBOTs\ARM\config">
+  <compiler angle="radian"/>
+  <contact>
+    <exclude body1="robot_base"   body2="link_swivel"/>
+  </contact>
+  <default>
+    <geom contype="0" conaffinity="0"/>
+  </default>
+  <asset>
+    <mesh name="front_base_mount" content_type="model/stl" file="front_base_mount.stl"/>
+    <mesh name="part_1" content_type="model/stl" file="part_1.stl"/>
+    <mesh name="part_1__2" content_type="model/stl" file="part_1__2.stl"/>
+    <mesh name="part_1__3" content_type="model/stl" file="part_1__3.stl"/>
+    <mesh name="part_3" content_type="model/stl" file="part_3.stl"/>
+    <mesh name="part_2" content_type="model/stl" file="part_2.stl"/>
+    <mesh name="part_1__4" content_type="model/stl" file="part_1__4.stl"/>
+    <mesh name="part_1__5" content_type="model/stl" file="part_1__5.stl"/>
+    <mesh name="part_1__6" content_type="model/stl" file="part_1__6.stl"/>
+    <mesh name="part_1__7" content_type="model/stl" file="part_1__7.stl"/>
+    <mesh name="support_large_v7" content_type="model/stl" file="support_large_v7.stl"/>
+    <mesh name="rds5160_v39" content_type="model/stl" file="rds5160_v39.stl"/>
+    <mesh name="rds5160_v39__2" content_type="model/stl" file="rds5160_v39__2.stl"/>
+    <mesh name="rds5160_v39__3" content_type="model/stl" file="rds5160_v39__3.stl"/>
+    <mesh name="rds5160_v39__4" content_type="model/stl" file="rds5160_v39__4.stl"/>
+    <mesh name="part_1__8" content_type="model/stl" file="part_1__8.stl"/>
+    <mesh name="part_1__9" content_type="model/stl" file="part_1__9.stl"/>
+    <mesh name="wheel_gear_v6" content_type="model/stl" file="wheel_gear_v6.stl"/>
+    <mesh name="support_small_v2" content_type="model/stl" file="support_small_v2.stl"/>
+    <mesh name="wheel_v5" content_type="model/stl" file="wheel_v5.stl"/>
+    <mesh name="rds3235_v9" content_type="model/stl" file="rds3235_v9.stl"/>
+    <mesh name="rds3235_v9__2" content_type="model/stl" file="rds3235_v9__2.stl"/>
+    <mesh name="part_1__10" content_type="model/stl" file="part_1__10.stl"/>
+    <mesh name="rds3235_v9__3" content_type="model/stl" file="rds3235_v9__3.stl"/>
+    <mesh name="support_large_2_v8" content_type="model/stl" file="support_large_2_v8.stl"/>
+    <mesh name="wheel_gear_v2" content_type="model/stl" file="wheel_gear_v2.stl"/>
+    <mesh name="wheel_v1" content_type="model/stl" file="wheel_v1.stl"/>
+    <mesh name="support_large_v4" content_type="model/stl" file="support_large_v4.stl"/>
+    <mesh name="wristlinkhead1" content_type="model/stl" file="wristlinkhead1.stl"/>
+    <mesh name="wristlinkbase1" content_type="model/stl" file="wristlinkbase1.stl"/>
+    <mesh name="part5" content_type="model/stl" file="part5.stl"/>
+    <mesh name="part4" content_type="model/stl" file="part4.stl"/>
+    <mesh name="part5__2" content_type="model/stl" file="part5__2.stl"/>
+    <mesh name="part1" content_type="model/stl" file="part1.stl"/>
+    <mesh name="part4__2" content_type="model/stl" file="part4__2.stl"/>
+  </asset>
+
+  <worldbody>
+    <body name="robot_base" pos="0 0 0">
+      <geom pos="0.08 0 0.4562582" quat="0.707105 0 0 0.707108" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="front_base_mount"/>
+      <body name="link_swivel" pos="0 0 0.5" quat="0.999414 0 0 -0.0342397">
+        <inertial pos="0.00000137 0.00698643 0.17639635" mass="0.767" fullinertia="0.02668063 0.02569654 0.00172517 0 0 -0.00103232"/>
+        <joint name="swivel" pos="0 0 0" axis="0 0 1" range="-6.2832 6.2832" actuatorfrcrange="-0.35 0.35" damping="0.5"/>
+        <geom pos="0 -0.0656 0.207" quat="1 0 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part_1"/>
+        <geom type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part_1__2"/>
+        <geom pos="0 -0.048 0.186" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.301961 0.290196 0.262745 1" mesh="part_1__3"/>
+        <geom pos="0 -0.048 0.186" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.901961 0.878431 0.811765 1" mesh="part_3"/>
+        <geom pos="0 -0.048 0.186" quat="1.32679e-06 0 0 -1" type="mesh" rgba="0.333333 0.894118 0.105882 1" mesh="part_2"/>
+        <body name="link_shoulder" pos="0 0.011125 0.207" quat="-0.492387 0.492386 0.507499 0.507499">
+          <inertial pos="0.00005988 0.23965704 -0.00063628" mass="0.385" diaginertia="0.02935149 0.00077712 0.02869629"/>
+          <joint name="shoulder" pos="0 0 0" axis="0 0 -1" range="0 3.14" ref = "0" actuatorfrcrange="-53.94 53.94" damping="5"/>
+          <geom pos="0 0 -0.000155" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part_1__4"/>
+          <geom pos="-0.0375 -0.03 0.037655" quat="0.499998 -0.5 -0.5 -0.500002" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part_1__5"/>
+          <geom pos="0.00845229 0.151369 -0.053655" quat="0.707105 -0.707108 0 0" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part_1__6"/>
+          <geom pos="-0.00845229 0.151369 0.053655" quat="9.38184e-07 9.38187e-07 -0.707108 -0.707105" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part_1__7"/>
+          <geom pos="-0.015 0.3405 0.026" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.960784 0.960784 0.964706 1" mesh="support_large_v7"/>
+          <geom pos="0.0111633 0.381158 0.0177886" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="rds5160_v39"/>
+          <geom pos="0.0111633 0.381158 0.0177886" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.768627 0.886275 0.952941 1" mesh="rds5160_v39__2"/>
+          <geom pos="0.0111633 0.381158 0.0177886" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="0.262745 0.282353 0.301961 1" mesh="rds5160_v39__3"/>
+          <geom pos="0.0111633 0.381158 0.0177886" quat="0.499998 -0.5 0.5 0.500002" type="mesh" rgba="1 0 0 1" mesh="rds5160_v39__4"/>
+          <body name="link_elbow" pos="0 0.4025 0" quat="0.9771 0 0 -0.212782">
+            <inertial pos="0.14675706 -0.18386685 -0.00039635" mass="0.24" fullinertia="0.01133164 0.00609044 0.01700293 0.00791165 0.00001671 -0.00002294"/>
+            <joint name="elbow" pos="0 0 0" axis="0 0 1" range="0 4" ref = "0.01" actuatorfrcrange="-15.69 15.69" damping="2.8"/>
+            <geom pos="0.131601 -0.149616 0.0362" quat="0.596367 0.379926 0.59637 -0.379928" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part_1__8"/>
+            <geom pos="0.033 -0.0025 0.0427" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part_1__9"/>
+            <geom pos="0 0 0.02655" quat="0.194306 0.194306 0.679887 0.679885" type="mesh" rgba="0.960784 0.960784 0.964706 1" mesh="wheel_gear_v6"/>
+            <geom pos="0.216841 -0.308752 -0.0003" quat="0.153046 0.690344 0.153046 -0.690347" type="mesh" rgba="0.960784 0.960784 0.964706 1" mesh="support_small_v2"/>
+            <geom pos="0 0 -0.02655" quat="0.707105 -0.707108 0 0" type="mesh" rgba="0.960784 0.960784 0.964706 1" mesh="wheel_v5"/>
+            <geom pos="0.131601 -0.149616 -0.0368" quat="0.379927 0.596367 -0.379928 0.596369" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part_1__8"/>
+            <geom pos="0.222526 -0.320942 -0.0003" quat="0.596367 0.59637 -0.379928 -0.379926" type="mesh" rgba="0.270588 0.572549 0.913725 1" mesh="rds3235_v9"/>
+            <geom pos="0.222526 -0.320942 -0.0003" quat="0.596367 0.59637 -0.379928 -0.379926" type="mesh" rgba="0.313725 0.305882 0.305882 1" mesh="rds3235_v9__2"/>
+            <geom pos="0.033 -0.0025 -0.0303" quat="0.499998 0.5 0.5 -0.500002" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part_1__10"/>
+            <geom pos="0.222526 -0.320942 -0.0003" quat="0.596367 0.59637 -0.379928 -0.379926" type="mesh" rgba="0.313725 0.305882 0.305882 1" mesh="rds3235_v9__3"/>
+            <geom pos="0.033 0.015 -0.03355" quat="9.38184e-07 -0.707105 -9.38187e-07 -0.707108" type="mesh" rgba="0.960784 0.960784 0.964706 1" mesh="support_large_2_v8"/>
+            <body name="link_wrist" pos="0.218111 -0.335137 -0.0003" quat="0.343937 0 0 0.938993">
+              <inertial pos="0.09430937 -0.09761125 -0.00198107" mass="0.426" fullinertia="0.00500876 0.00618009 0.01044809 0.00493217 0.00012665 -0.00010578"/>
+              <joint name="wrist" pos="0 0 0" axis="0 0 -1" range="0 4.1" ref = "0.03" actuatorfrcrange="-3.43 3.43" damping="1"/>
+              <site name="ee_site" pos="0.16360019 -0.155 0.0" quat="0.148615 0.668225 -0.138768 0.715635" size="0.01"/>
+              <geom pos="2.62035e-06 2.2736e-08 0.0265" quat="1.32679e-06 -1 0 0" type="mesh" rgba="0.960784 0.960784 0.964706 1" mesh="wheel_gear_v2"/>
+              <geom pos="0 0 -0.0265" quat="0.707105 0 0 -0.707108" type="mesh" rgba="0.960784 0.960784 0.964706 1" mesh="wheel_v1"/>
+              <geom pos="-0.00993359 -0.00844969 0" quat="0.707105 0 0.707108 0" type="mesh" rgba="0.960784 0.960784 0.964706 1" mesh="support_large_v4"/>
+              <geom pos="-0.0336512 -0.0181757 -0.0172342" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="wristlinkhead1"/>
+              <geom pos="-0.0336512 -0.0181757 -0.0172342" quat="9.38184e-07 0.707105 -9.38187e-07 0.707108" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="wristlinkbase1"/>
+              <geom pos="0.0355118 -0.0548151 0.032" quat="1.29534e-06 -0.976296 0.216439 -2.87171e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part5"/>
+              <geom pos="0.0355118 -0.0548151 0.032" quat="1.29534e-06 -0.976296 0.216439 -2.87171e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part4"/>
+              <geom pos="0.0355118 -0.0548151 0.032" quat="1.29534e-06 -0.976296 0.216439 -2.87171e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part5__2"/>
+              <geom pos="0.0355118 -0.0548151 0.032" quat="1.29534e-06 -0.976296 0.216439 -2.87171e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part1"/>
+              <geom pos="0.0355118 -0.0548151 0.032" quat="1.29534e-06 -0.976296 0.216439 -2.87171e-07" type="mesh" rgba="0.901961 0.901961 0.901961 1" mesh="part4__2"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <position joint="swivel" kp="40" ctrlrange="-3.1415 3.1415"/>
+    <position joint="shoulder" kp="15" ctrlrange="0 3.14"/>
+    <position joint="elbow" kp="9" ctrlrange="0 4"/>
+    <position joint="wrist" kp="6" ctrlrange="0 4.1"/>
+  </actuator>
+  <keyframe>
+    <key name="home" qpos="0 0 0 0"/>
+  </keyframe>
+</mujoco>
